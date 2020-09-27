@@ -6,7 +6,7 @@ export const CardGrid = ({ term }) => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     fetch(
-      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true&per_page=4`
     )
       .then((res) => res.json())
       .then((data) => {
